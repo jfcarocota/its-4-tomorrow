@@ -40,6 +40,7 @@ public class CommandDie : MonoBehaviour
 
     void ResetConsole()
     {
+        responsesClone.Clear();
         responsesClone = lineResponse;
         int selected = Random.Range(0, lineResponse.Count - 1);
         responsesClone.RemoveAt(selected);
@@ -69,12 +70,14 @@ public class CommandDie : MonoBehaviour
         if(CommandMatch)
         {
             hamma.GettingDamage(yourDamage);
+            ResetConsole();
             //Shutdown();
         }
         else
         {
             //hamma attack
             GettingDamage(hamma.Damage);
+            Application.Quit();
         }
     }
 
