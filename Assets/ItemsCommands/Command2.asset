@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d41a801cff50ede42b74b086b7b20594, type: 3}
+  m_Name: Command2
+  m_EditorClassIdentifier: 
+  message: "\xBFEscuchas eso, algo se a caido hasta el suelo?, con facturaci\xF3n
+    y sin sistema solo la miseria te espera."
+  instruction: server-down
+  fixCommand: server-start
