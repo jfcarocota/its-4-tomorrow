@@ -8,12 +8,15 @@ public class Gamemanager : MonoBehaviour
     [SerializeField]
     CommandDie commandDie;
 
-    public static Gamemanager instance; 
+    [SerializeField]
+    GameObject winText;
+    
+    public static Gamemanager instance;
+
+    public GameObject WinText { get => winText; }
 
     void AWake()
     {
         instance = this;
     }
-
-
 }

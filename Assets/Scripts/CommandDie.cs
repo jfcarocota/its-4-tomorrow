@@ -26,6 +26,12 @@ public class CommandDie : MonoBehaviour
 
     [SerializeField]
     int yourDamage;
+    [SerializeField]
+    GameObject firedText;
+    [SerializeField]
+    int health;
+    [SerializeField]
+    Text txtAfore;
     
     void Start()
     {
@@ -63,8 +69,12 @@ public class CommandDie : MonoBehaviour
         if(CommandMatch)
         {
             hamma.GettingDamage(yourDamage);
-            Debug.Log("Damage");
             //Shutdown();
+        }
+        else
+        {
+            //hamma attack
+            GettingDamage(hamma.Damage);
         }
     }
 
@@ -78,5 +88,12 @@ public class CommandDie : MonoBehaviour
     {
         System.Diagnostics.Process.Start("osascript" + "Kiosk1.Contents.Data.StreamingAssets" + "/ShutDownMac.scpt");
         System.Diagnostics.Process.Start("osascript Kiosk1/Contents/Data/StreamingAssets/ShutDownMac.scpt");
+    }
+
+    public void GettingDamage(int dmg)
+    {
+        health -= health - dmg < 0 ? 0 : dmg;
+        txtAfore.text = $"AFORE: <color=magenta>{health}%</color>";
+        firedText.SetActive(health == 0);
     }
 }

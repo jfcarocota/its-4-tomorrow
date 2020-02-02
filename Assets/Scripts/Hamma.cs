@@ -13,6 +13,9 @@ public class Hamma : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI  txtHealth;
 
+    [SerializeField]
+    GameObject winText;
+
     public int Health { get => health; }
     public int Damage { get => damage; }
 
@@ -20,5 +23,6 @@ public class Hamma : MonoBehaviour
     {
         health -= health - dmg < 0 ? 0 : dmg;
         txtHealth.text = $"Vida: <color=orange>{health}</color>";
+        winText.SetActive(health == 0);
     }
 }
