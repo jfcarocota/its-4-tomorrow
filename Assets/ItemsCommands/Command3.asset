@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Command3
   m_EditorClassIdentifier: 
   message: "Algo sali\xF3 mal en la presentaci\xF3n, asi que promet\xED una nueva
-    feature para ma\xF1ana. "
+    feature para ma\xF1ana"
   instruction: tmrw
   fixCommand: coffe

@@ -7,13 +7,21 @@ public class CommandDie : MonoBehaviour
 {
     [SerializeField]
     Text message;
+    [SerializeField]
+    Text options;
 
     [SerializeField]
     List<CommandAsset> lineResponse = new List<CommandAsset>(0);
 
+    List<CommandAsset> responsesClone = new List<CommandAsset>(0);
+
     void Start()
     {
-        SendMessage(lineResponse[Random.Range(1, lineResponse.Count)].Message);
+        responsesClone = lineResponse;
+        int selected = Random.Range(0, lineResponse.Count - 1);
+        responsesClone.RemoveAt(selected);
+        SendMessage(lineResponse[selected].Message);
+        PopulateOptions();
     }
 
     public void SendMessage(string myMessage)
@@ -21,4 +29,11 @@ public class CommandDie : MonoBehaviour
         message.text = $"{myMessage}>";
     }
 
+    void PopulateOptions()
+    {
+        for(int i = 0; i < 3; i++)
+        {
+            options.text += $"\n○ {responsesClone[i].FixCommand}";
+        }
+    }
 }
