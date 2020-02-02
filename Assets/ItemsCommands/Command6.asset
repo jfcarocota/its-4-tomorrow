@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d41a801cff50ede42b74b086b7b20594, type: 3}
   m_Name: Command6
   m_EditorClassIdentifier: 
-  message: "Tengo un nuevo proyecto :3. \xA1EN COBOL!"
-  instruction: COBOL
-  fixCommand: translator
+  message: Parece que alguien subio mal un commit pero afortunadamente solo afecta
+    a tu branch
+  instruction: fuck-u
+  fixCommand: reset-hard

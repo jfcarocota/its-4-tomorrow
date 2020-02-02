@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d41a801cff50ede42b74b086b7b20594, type: 3}
   m_Name: Command5
   m_EditorClassIdentifier: 
-  message: "\xBFHueles eso?, es tu nuevo propyecto con PHP."
+  message: "\xBFHueles eso?, es tu nuevo proyecto con... PHP!!!"
   instruction: old
-  fixCommand: 
+  fixCommand: laravel
